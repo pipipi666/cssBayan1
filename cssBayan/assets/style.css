@@ -7,10 +7,6 @@ body {
   width: min(50rem, 90vw);
 }
 
-.container:hover .icon {
-  display: flex;
-}
-
 .ul {
   padding: 0;
   list-style: none;
@@ -38,21 +34,48 @@ body {
 }
 
 .li {
-  border-top: 1px solid #666666;
+  border-top: 0.1rem solid #666666;
 }
 
-.container:hover {
-  cursor: pointer;
+h2 {
+  color: #82449b;
 }
 
-.li:hover .icon {
-  transform: rotate(0);
-}
-
-.li:hover .img {
-  display: flex;
+.container .input:checked ~ .row h2 {
+  color: #000;
 }
 
 .input:checked ~ .row .img {
   display: flex;
+}
+
+.input:checked ~ .row .icon {
+  transform: rotate(0);
+}
+
+.row {
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  /* when hover is supported */
+  .container:hover {
+    cursor: pointer;
+  }
+
+  .container:hover h2 {
+    color: #000;
+  }
+
+  .container:hover .icon {
+    display: flex;
+  }
+
+  .li:hover .icon {
+    transform: rotate(0);
+  }
+
+  .li:hover .img {
+    display: flex;
+  }
 }
