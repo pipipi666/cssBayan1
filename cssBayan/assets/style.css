@@ -7,6 +7,16 @@ body {
   width: min(50rem, 90vw);
 }
 
+h1 {
+  font-family: "Rampart One", Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  color: #82449b;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
 .ul {
   padding: 0;
   list-style: none;
@@ -37,10 +47,6 @@ body {
   border-top: 0.1rem solid #666666;
 }
 
-h2 {
-  color: #82449b;
-}
-
 .container .input:checked ~ .row h2 {
   color: #000;
 }
@@ -55,6 +61,10 @@ h2 {
 
 .row {
   cursor: pointer;
+}
+
+.row:active {
+  cursor: wait;
 }
 
 @media (hover: hover) {
